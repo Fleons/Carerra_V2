@@ -1,5 +1,0 @@
-C:\Users\Philip Delorenzo\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\CanonSDKTutorialV11\CanonSDKTutorial\EDSDKLib\bin\Debug\EDSDKLib.dll
-C:\Users\Philip Delorenzo\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\CanonSDKTutorialV11\CanonSDKTutorial\EDSDKLib\bin\Debug\EDSDKLib.pdb
-C:\Users\Philip Delorenzo\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\CanonSDKTutorialV11\CanonSDKTutorial\EDSDKLib\obj\x86\Debug\EDSDKLib.csprojResolveAssemblyReference.cache
-C:\Users\Philip Delorenzo\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\CanonSDKTutorialV11\CanonSDKTutorial\EDSDKLib\obj\x86\Debug\EDSDKLib.dll
-C:\Users\Philip Delorenzo\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\CanonSDKTutorialV11\CanonSDKTutorial\EDSDKLib\obj\x86\Debug\EDSDKLib.pdb
