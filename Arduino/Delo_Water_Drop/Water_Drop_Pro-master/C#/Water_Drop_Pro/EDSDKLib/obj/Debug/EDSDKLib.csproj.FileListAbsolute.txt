@@ -1,0 +1,14 @@
+X:\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\Water_Drop_Pro\EDSDKLib\bin\Debug\EDSDKLib.dll
+X:\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\Water_Drop_Pro\EDSDKLib\bin\Debug\EDSDKLib.pdb
+X:\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.dll
+X:\Dropbox\Projekte\Arduino_Projects\Water_Drop\Water_Drop_Pro\dev\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.pdb
+C:\Users\Philip\Documents\GitHub\Water_Drop_Pro\C#\Water_Drop_Pro\EDSDKLib\bin\Debug\EDSDKLib.dll
+C:\Users\Philip\Documents\GitHub\Water_Drop_Pro\C#\Water_Drop_Pro\EDSDKLib\bin\Debug\EDSDKLib.pdb
+C:\Users\Philip\Documents\GitHub\Water_Drop_Pro\C#\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.csprojResolveAssemblyReference.cache
+C:\Users\Philip\Documents\GitHub\Water_Drop_Pro\C#\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.dll
+C:\Users\Philip\Documents\GitHub\Water_Drop_Pro\C#\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.pdb
+C:\Users\Max\Downloads\Water_Drop_Pro-master\Water_Drop_Pro-master\C#\Water_Drop_Pro\EDSDKLib\bin\Debug\EDSDKLib.dll
+C:\Users\Max\Downloads\Water_Drop_Pro-master\Water_Drop_Pro-master\C#\Water_Drop_Pro\EDSDKLib\bin\Debug\EDSDKLib.pdb
+C:\Users\Max\Downloads\Water_Drop_Pro-master\Water_Drop_Pro-master\C#\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.csprojResolveAssemblyReference.cache
+C:\Users\Max\Downloads\Water_Drop_Pro-master\Water_Drop_Pro-master\C#\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.dll
+C:\Users\Max\Downloads\Water_Drop_Pro-master\Water_Drop_Pro-master\C#\Water_Drop_Pro\EDSDKLib\obj\Debug\EDSDKLib.pdb
