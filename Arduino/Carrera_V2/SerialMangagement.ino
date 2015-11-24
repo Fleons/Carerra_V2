@@ -2,23 +2,25 @@
 // ######################################### SERIAL INPUT#############################################################
 // #####################################################################################################################
 
-void serialInput(string Parameter_Data)
+void serialInput(String Parameter_Data)
 {
-      if(Parameter_Data.startswith(Data_Phrase))
+      if(Parameter_Data.startsWith(Data_Phrase))
       {
-        serialOutput(Data_Phrase+ "|" + SignalValue);
+        serialOutput(Data_Phrase+ '|' + SignalValue);
       }
-      else if (Parameter_Data.startswith(Cal_Phrase))
+      else if (Parameter_Data.startsWith(Cal_Phrase))
       {
-        VehicleCalibrationValue= splitString(Cal_Phrase, ,"|", 1);
+        VehicleCalibrationValue= splitString(Cal_Phrase,'|', 1).toInt();
+        EEPROM.write(EEPROM_VehicleCalibrationValue, VehicleCalibrationValue);
+        
       }
-      else if (Parameter_Data.startswith(SFactor_Phrase))
+      else if (Parameter_Data.startsWith(SFactor_Phrase))
       {
-        SpeedFactor= splitString(SFactor_Phrase, ,"|", 1);
+        SpeedFactor=  splitString(SFactor_Phrase,'|', 1).toInt();
       }
-      else if (Parameter_Data.startswith(Control_Phrase))
+      else if (Parameter_Data.startsWith(Control_Phrase))
       {
-        StringTemp = splitString(Control_Phrase, ,"|", 1);
+        StringTemp = splitString(Control_Phrase,'|', 1);
         if(StringTemp == Start_Phrase)
         {
           RunFlag = true;
@@ -30,9 +32,9 @@ void serialInput(string Parameter_Data)
         }
 
       }
-      else if (Parameter_Data.startswith(VMax_Phrase))
+      else if (Parameter_Data.startsWith(VMax_Phrase))
       {
-        MaxSpeedValue = splitString(VMax_Phrase, ,"|", 1);
+        MaxSpeedValue = splitString(VMax_Phrase,'|', 1).toInt();
       }
 
 }

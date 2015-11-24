@@ -16,6 +16,9 @@ String Cal_Phrase = "CAL";
 String SFactor_Phrase = "SFACTOR";
 String Control_Phrase = "CONTROL";
 String VMax_Phrase = "VMAX";
+String Start_Phrase ="START";
+String End_Phrase = "END";
+String StringTemp = "";
 
 void setup() {
   pinMode(SpeedPin, OUTPUT);                                                    //setzen des Ausgangspin für den Transistor
@@ -24,9 +27,13 @@ void setup() {
 }
 
 void loop() {
+  
   drive();
+  
   if (Serial.available())
   {
-      serialIntput(readStringUntil(";"));                                       //Funktion in SerialManagement.ino
+      serialInput(Serial.readStringUntil(';'));
+      Serial.flush();
   }
+  
 }
