@@ -43,8 +43,18 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.chart_kraftverlauf = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.hScrollBar_Nullpunkt = new System.Windows.Forms.HScrollBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_Bahn_aktiviert = new System.Windows.Forms.Button();
+            this.Label_Maxgeschw = new System.Windows.Forms.Label();
+            this.numericUpDown_VMAX = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_kraftverlauf)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_VMAX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -72,6 +82,7 @@
             // radioButton_mann
             // 
             resources.ApplyResources(this.radioButton_mann, "radioButton_mann");
+            this.radioButton_mann.Checked = true;
             this.radioButton_mann.Name = "radioButton_mann";
             this.radioButton_mann.TabStop = true;
             this.radioButton_mann.UseVisualStyleBackColor = true;
@@ -80,14 +91,12 @@
             // 
             resources.ApplyResources(this.radioButton_frau, "radioButton_frau");
             this.radioButton_frau.Name = "radioButton_frau";
-            this.radioButton_frau.TabStop = true;
             this.radioButton_frau.UseVisualStyleBackColor = true;
             // 
             // radioButton_kind
             // 
             resources.ApplyResources(this.radioButton_kind, "radioButton_kind");
             this.radioButton_kind.Name = "radioButton_kind";
-            this.radioButton_kind.TabStop = true;
             this.radioButton_kind.UseVisualStyleBackColor = true;
             // 
             // button_datenaufnahme
@@ -124,10 +133,63 @@
             resources.ApplyResources(this.richTextBox1, "richTextBox1");
             this.richTextBox1.Name = "richTextBox1";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.hScrollBar_Nullpunkt);
+            this.panel2.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // hScrollBar_Nullpunkt
+            // 
+            resources.ApplyResources(this.hScrollBar_Nullpunkt, "hScrollBar_Nullpunkt");
+            this.hScrollBar_Nullpunkt.Maximum = 255;
+            this.hScrollBar_Nullpunkt.Name = "hScrollBar_Nullpunkt";
+            this.hScrollBar_Nullpunkt.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar_Nullpunkt_Scroll);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // button_Bahn_aktiviert
+            // 
+            resources.ApplyResources(this.button_Bahn_aktiviert, "button_Bahn_aktiviert");
+            this.button_Bahn_aktiviert.Name = "button_Bahn_aktiviert";
+            this.button_Bahn_aktiviert.UseVisualStyleBackColor = true;
+            this.button_Bahn_aktiviert.Click += new System.EventHandler(this.button_Bahn_aktiviert_Click);
+            // 
+            // Label_Maxgeschw
+            // 
+            resources.ApplyResources(this.Label_Maxgeschw, "Label_Maxgeschw");
+            this.Label_Maxgeschw.Name = "Label_Maxgeschw";
+            // 
+            // numericUpDown_VMAX
+            // 
+            resources.ApplyResources(this.numericUpDown_VMAX, "numericUpDown_VMAX");
+            this.numericUpDown_VMAX.Name = "numericUpDown_VMAX";
+            this.numericUpDown_VMAX.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_VMAX.ValueChanged += new System.EventHandler(this.numericUpDown_VMAX_ValueChanged);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.numericUpDown_VMAX);
+            this.Controls.Add(this.Label_Maxgeschw);
+            this.Controls.Add(this.button_Bahn_aktiviert);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.chart_kraftverlauf);
             this.Controls.Add(this.button_datenaufnahme);
@@ -139,7 +201,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_kraftverlauf)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_VMAX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -155,6 +222,13 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_kraftverlauf;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.HScrollBar hScrollBar_Nullpunkt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_Bahn_aktiviert;
+        private System.Windows.Forms.Label Label_Maxgeschw;
+        private System.Windows.Forms.NumericUpDown numericUpDown_VMAX;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -20,6 +20,13 @@ namespace carerra_gui
         int counter = 1;       //counter: port geschlossen wenn ungerade
         int[,] werte = new int[120,120]; //array zum einlesen der werte für einen plot 
         double zaehler = 0;
+        string Cal_Phrase = "CAL";           
+        String SFactor_Phrase = "SFACTOR";
+        String Control_Phrase = "CONTROL";
+        String VMax_Phrase = "VMAX";
+        String Start_Phrase = "START";
+        String End_Phrase = "END";
+        String StringTemp = "";
 
         //Serial
         String Data_Phrase = "DATA";
@@ -164,9 +171,28 @@ namespace carerra_gui
 
         private void button_datenaufnahme_Click(object sender, EventArgs e)
         {         
+            if (radioButton_kind.Checked)
+            {
+                serialOutput(SFactor_Phrase + "|3");
+            }
+            else if (radioButton_frau.Checked)
+            {
+                serialOutput(SFactor_Phrase + "|2");
+            }
+            else if (radioButton_mann.Checked)
+            {
+                serialOutput(SFactor_Phrase + "|1");
+            }
+
+
+
+
+
+
+
             timer.Start();
             zaehler = 0;
-             
+
         }
 
        private void timer_Tick(object sender, EventArgs e)
@@ -179,6 +205,30 @@ namespace carerra_gui
             {
                 timer.Stop();
             }
-        } 
+        }
+
+        private void hScrollBar_Nullpunkt_Scroll(object sender, ScrollEventArgs e)
+        {
+            serialOutput(Cal_Phrase + "|" + hScrollBar_Nullpunkt.Value);
+        }
+
+        private void button_Bahn_aktiviert_Click(object sender, EventArgs e)
+        {
+            if(button_Bahn_aktiviert.Text =="Bahn aktiv")
+            {
+                button_Bahn_aktiviert.Text = "Bahn INKATIV";
+                serialOutput(Control_Phrase + "|" + End_Phrase);
+            }
+            else if (button_Bahn_aktiviert.Text == "Bahn INAKTIV")
+            {
+                button_Bahn_aktiviert.Text = "Bahn aktiv";
+                serialOutput(Control_Phrase + "|" + Start_Phrase);
+            }
+        }
+
+        private void numericUpDown_VMAX_ValueChanged(object sender, EventArgs e)
+        {
+            serialOutput(VMax_Phrase + "|" + numericUpDown_VMAX.Value);
+        }
     }
 }
