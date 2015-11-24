@@ -40,9 +40,9 @@
             this.radioButton_frau = new System.Windows.Forms.RadioButton();
             this.radioButton_kind = new System.Windows.Forms.RadioButton();
             this.button_datenaufnahme = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.chart_kraftverlauf = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_kraftverlauf)).BeginInit();
             this.SuspendLayout();
@@ -97,11 +97,6 @@
             this.button_datenaufnahme.UseVisualStyleBackColor = true;
             this.button_datenaufnahme.Click += new System.EventHandler(this.button_datenaufnahme_Click);
             // 
-            // richTextBox1
-            // 
-            resources.ApplyResources(this.richTextBox1, "richTextBox1");
-            this.richTextBox1.Name = "richTextBox1";
-            // 
             // timer
             // 
             this.timer.Interval = 500;
@@ -124,12 +119,17 @@
             series1.Name = "V1";
             this.chart_kraftverlauf.Series.Add(series1);
             // 
+            // richTextBox1
+            // 
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
+            this.richTextBox1.Name = "richTextBox1";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chart_kraftverlauf);
             this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.chart_kraftverlauf);
             this.Controls.Add(this.button_datenaufnahme);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_connect);
@@ -152,9 +152,9 @@
         private System.Windows.Forms.RadioButton radioButton_frau;
         private System.Windows.Forms.RadioButton radioButton_kind;
         private System.Windows.Forms.Button button_datenaufnahme;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_kraftverlauf;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

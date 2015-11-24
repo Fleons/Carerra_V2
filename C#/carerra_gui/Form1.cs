@@ -14,17 +14,19 @@ namespace carerra_gui
 {
     public partial class Form1 : Form
     {
-        
+        #region DECLARATION
         SerialPort _myport = new SerialPort();
-        int counter = 1;            //port geschlossen wenn ungerade
+
+        int counter = 1;       //counter: port geschlossen wenn ungerade
         int[,] werte = new int[120,120]; //array zum einlesen der werte für einen plot 
         double zaehler = 0;
-        double previousValue = 0;
-        double currentValue = 0;
-        int runde = 0;
-        
-        //---------------------------------------------------------------------------------------------
 
+        //Serial
+        String Data_Phrase = "DATA";
+       
+
+        #endregion
+       
 
         public Form1()
         {
@@ -39,7 +41,9 @@ namespace carerra_gui
             comboBox1.DataSource = ports;           
         }
 
-       void Connect(string portName)
+
+        #region CONNECT/DISCONNECT
+        void Connect(string portName)
         {
             _myport = new SerialPort(portName);
                 if (!_myport.IsOpen)
@@ -50,6 +54,7 @@ namespace carerra_gui
                     _myport.Handshake = Handshake.None;
                     _myport.RtsEnable = true;
                     _myport.Open();
+                    _myport.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
                 if (_myport.IsOpen == true)
                 {
                     MessageBox.Show("Port ist offen");
@@ -57,6 +62,7 @@ namespace carerra_gui
 
             }  
         }
+        
         void disconnect()
         {
             timer.Stop();
@@ -72,18 +78,59 @@ namespace carerra_gui
             }
 
         }
+        #endregion
 
-    /*   void DataReceiveHandler(object sender, SerialDataReceivedEventArgs e)
+
+        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            SerialPort sp = (SerialPort)sender;
-            Byte[] data = new Byte[5];
-            int datalength = 5;
-            sp.Read(data,0,datalength);
-            textBox1.Text = Convert.ToString(data[4]);
-        }
-        */
+            string Received = string.Empty;
 
-        //------------------------------------------------------------------------------------------------------------------
+            try
+            {
+                Received = _myport.ReadTo(";");
+                // Clear the buffer
+                _myport.DiscardInBuffer();
+                _myport.DiscardOutBuffer();
+            }
+            catch (Exception)
+            {
+                Received = string.Empty;
+              
+
+            }
+
+            if (Received.StartsWith(Data_Phrase))
+            {
+                string[] Split_Seperator = new string[] { "|" };
+                string[] Split_Buffer = Received.Split(Split_Seperator, StringSplitOptions.None);
+                if (Split_Buffer[0] == "DATA")
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        richTextBox1.AppendText(Split_Buffer[1]);
+                        chart_kraftverlauf.Series["V1"].Points.AddXY(zaehler / 2, Split_Buffer[1]);
+
+                    });
+                    
+                }
+            }   
+
+        }
+
+        private void serialOutput(string Parameter_Data)
+        {
+            try
+            {
+                _myport.Write(Parameter_Data + ";");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+
+
+       
 
 
 
@@ -95,9 +142,7 @@ namespace carerra_gui
         private void label1_Click(object sender, EventArgs e)
         {
         }
-
-
-        //--------------------------------------------------------------------------------------------------------------
+        
 
         private void button_connect_Click(object sender, EventArgs e)
         {
@@ -121,42 +166,19 @@ namespace carerra_gui
         {         
             timer.Start();
             zaehler = 0;
-            
-            
-               
+             
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+       private void timer_Tick(object sender, EventArgs e)
         {
             zaehler++;
 
-            _myport.DiscardInBuffer();
-
-            string Data = _myport.ReadLine();
-
-
-
-
-
-            //    if (Data != "" || Data != "\r" )
-            //   {
-            try { 
-                currentValue = Convert.ToDouble(Data);
-                
-                richTextBox1.AppendText(Data);
-                chart_kraftverlauf.Series["V1"].Points.AddXY(zaehler/2, currentValue);
-
-                zaehler++;
-            }    
-            catch
-            {
-                zaehler++;
-            }        
+            serialOutput("DATA");
             
             if (zaehler > 120)
             {
                 timer.Stop();
             }
-        }
+        } 
     }
 }
