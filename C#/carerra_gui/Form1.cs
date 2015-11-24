@@ -216,10 +216,10 @@ namespace carerra_gui
         {
             if(button_Bahn_aktiviert.Text =="Bahn aktiv")
             {
-                button_Bahn_aktiviert.Text = "Bahn INKATIV";
+                button_Bahn_aktiviert.Text = "Bahn inaktiv";
                 serialOutput(Control_Phrase + "|" + End_Phrase);
             }
-            else if (button_Bahn_aktiviert.Text == "Bahn INAKTIV")
+            else if (button_Bahn_aktiviert.Text == "Bahn inaktiv")
             {
                 button_Bahn_aktiviert.Text = "Bahn aktiv";
                 serialOutput(Control_Phrase + "|" + Start_Phrase);

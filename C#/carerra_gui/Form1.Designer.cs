@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button_connect = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -114,19 +114,19 @@
             // chart_kraftverlauf
             // 
             this.chart_kraftverlauf.BackColor = System.Drawing.SystemColors.Control;
-            chartArea1.Name = "ChartArea1";
-            this.chart_kraftverlauf.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_kraftverlauf.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart_kraftverlauf.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_kraftverlauf.Legends.Add(legend2);
             resources.ApplyResources(this.chart_kraftverlauf, "chart_kraftverlauf");
             this.chart_kraftverlauf.Name = "chart_kraftverlauf";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.Red;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            series1.Legend = "Legend1";
-            series1.Name = "V1";
-            this.chart_kraftverlauf.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            series2.Legend = "Legend1";
+            series2.Name = "V1";
+            this.chart_kraftverlauf.Series.Add(series2);
             // 
             // richTextBox1
             // 
