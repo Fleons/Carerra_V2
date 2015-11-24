@@ -1,0 +1,42 @@
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\bin\Debug\carerra_gui.exe.config
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\bin\Debug\carerra_gui.exe
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\bin\Debug\carerra_gui.pdb
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.csprojResolveAssemblyReference.cache
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.Form1.resources
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.Properties.Resources.resources
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.csproj.GenerateResource.Cache
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.exe
+Z:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.pdb
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\bin\Debug\carerra_gui.exe.config
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.exe
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.pdb
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\bin\Debug\carerra_gui.exe
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\bin\Debug\carerra_gui.pdb
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.csprojResolveAssemblyReference.cache
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.Form1.resources
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.Properties.Resources.resources
+X:\Carrera\Software\Development C#\carerra_gui\carerra_gui\obj\Debug\carerra_gui.csproj.GenerateResource.Cache
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\carerra_gui.exe.config
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.exe
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.pdb
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\carerra_gui.exe
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\carerra_gui.pdb
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\de-AT\carerra_gui.resources.dll
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.csprojResolveAssemblyReference.cache
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.Form1.resources
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.Properties.Resources.resources
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.Form1.de-AT.resources
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.csproj.GenerateResource.Cache
+E:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\de-AT\carerra_gui.resources.dll
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\carerra_gui.exe.config
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.exe
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.pdb
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\carerra_gui.exe
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\carerra_gui.pdb
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\bin\Debug\de-AT\carerra_gui.resources.dll
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.csprojResolveAssemblyReference.cache
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.Form1.resources
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.Properties.Resources.resources
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.Form1.de-AT.resources
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\carerra_gui.csproj.GenerateResource.Cache
+D:\Carrera_Projekt\V2.0_Max\carerra_gui\obj\Debug\de-AT\carerra_gui.resources.dll
