@@ -18,22 +18,23 @@ String Control_Phrase = "CONTROL";
 String VMax_Phrase = "VMAX";
 String Start_Phrase ="START";
 String End_Phrase = "END";
-String StringTemp = "";
 
 void setup() {
+  pinMode(13, OUTPUT);
   pinMode(SpeedPin, OUTPUT);                                                    //setzen des Ausgangspin für den Transistor
   Serial.begin(9600);
   VehicleCalibrationValue = EEPROM.read(EEPROM_VehicleCalibrationValue);        //Kalibrierungswert aus dem EEPROM auslesen.
+  digitalWrite(13, HIGH);
 }
 
 void loop() {
-  
+
   drive();
-  
+
   if (Serial.available())
   {
       serialInput(Serial.readStringUntil(';'));
       Serial.flush();
   }
-  
+
 }

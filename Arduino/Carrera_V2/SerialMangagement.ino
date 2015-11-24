@@ -10,31 +10,32 @@ void serialInput(String Parameter_Data)
       }
       else if (Parameter_Data.startsWith(Cal_Phrase))
       {
-        VehicleCalibrationValue= splitString(Cal_Phrase,'|', 1).toInt();
+        VehicleCalibrationValue= splitString(Parameter_Data,'|', 1).toInt();
         EEPROM.write(EEPROM_VehicleCalibrationValue, VehicleCalibrationValue);
-        
+
       }
       else if (Parameter_Data.startsWith(SFactor_Phrase))
       {
-        SpeedFactor=  splitString(SFactor_Phrase,'|', 1).toInt();
+        SpeedFactor = splitString(Parameter_Data,'|', 1).toInt();
       }
       else if (Parameter_Data.startsWith(Control_Phrase))
       {
-        StringTemp = splitString(Control_Phrase,'|', 1);
-        if(StringTemp == Start_Phrase)
+        if(splitString(Parameter_Data,'|', 1) == Start_Phrase)
         {
           RunFlag = true;
+          digitalWrite(13, HIGH);
         }
-        else if (StringTemp == End_Phrase)
+        else if (splitString(Parameter_Data,'|', 1) == End_Phrase)
         {
           RunFlag = false;
           analogWrite(SpeedPin,0);
+          digitalWrite(13, LOW);
         }
 
       }
       else if (Parameter_Data.startsWith(VMax_Phrase))
       {
-        MaxSpeedValue = splitString(VMax_Phrase,'|', 1).toInt();
+        MaxSpeedValue = splitString(Parameter_Data,'|', 1).toInt();
       }
 
 }
