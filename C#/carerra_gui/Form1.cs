@@ -114,7 +114,7 @@ namespace carerra_gui
                 {
                     this.Invoke((MethodInvoker)delegate
                     {
-                        richTextBox1.AppendText(Split_Buffer[1]);
+                        richTextBox1.AppendText(Split_Buffer[1]+ " ");
                         chart_kraftverlauf.Series["V1"].Points.AddXY(zaehler / 2, Split_Buffer[1]);
 
                     });
@@ -170,28 +170,41 @@ namespace carerra_gui
         }
 
         private void button_datenaufnahme_Click(object sender, EventArgs e)
-        {         
-            if (radioButton_kind.Checked)
+        {
+            if (_myport.IsOpen)
             {
-                serialOutput(SFactor_Phrase + "|3");
+                chart_kraftverlauf.Series["V1"].Points.Clear();
+
+
+                if (radioButton_kind.Checked)
+                {
+                    serialOutput(SFactor_Phrase + "|3");
+                }
+                else if (radioButton_frau.Checked)
+                {
+                    serialOutput(SFactor_Phrase + "|2");
+                }
+                else if (radioButton_mann.Checked)
+                {
+                    serialOutput(SFactor_Phrase + "|1");
+                }
+
+
+                timer.Start();
+                zaehler = 0;
+
+                if (button_datenaufnahme.Text == "Starte Aufnahme...")
+                {
+                    button_datenaufnahme.Text = "Messabruch";
+                }
+                else if (button_datenaufnahme.Text == "Messabruch")
+                {
+                    button_datenaufnahme.Text = "Starte Aufnahme...";
+                    timer.Stop();
+
+                }
             }
-            else if (radioButton_frau.Checked)
-            {
-                serialOutput(SFactor_Phrase + "|2");
-            }
-            else if (radioButton_mann.Checked)
-            {
-                serialOutput(SFactor_Phrase + "|1");
-            }
-
-
-
-
-
-
-
-            timer.Start();
-            zaehler = 0;
+            else { MessageBox.Show("Port nicht offen- Verbindung zu Hardware erforderlich"); }
 
         }
 
@@ -203,6 +216,7 @@ namespace carerra_gui
             
             if (zaehler > 120)
             {
+                button_datenaufnahme.Text = "Starte Aufnahme...";
                 timer.Stop();
             }
         }
@@ -214,16 +228,21 @@ namespace carerra_gui
 
         private void button_Bahn_aktiviert_Click(object sender, EventArgs e)
         {
-            if(button_Bahn_aktiviert.Text =="Bahn aktiv")
+            if (_myport.IsOpen)
             {
-                button_Bahn_aktiviert.Text = "Bahn inaktiv";
-                serialOutput(Control_Phrase + "|" + End_Phrase);
+                if (button_Bahn_aktiviert.Text == "Bahn aktiv")
+                {
+                    button_Bahn_aktiviert.Text = "Bahn inaktiv";
+                    serialOutput(Control_Phrase + "|" + End_Phrase);
+                }
+                else if (button_Bahn_aktiviert.Text == "Bahn inaktiv")
+                {
+                    button_Bahn_aktiviert.Text = "Bahn aktiv";
+                    serialOutput(Control_Phrase + "|" + Start_Phrase);
+                }
             }
-            else if (button_Bahn_aktiviert.Text == "Bahn inaktiv")
-            {
-                button_Bahn_aktiviert.Text = "Bahn aktiv";
-                serialOutput(Control_Phrase + "|" + Start_Phrase);
-            }
+            else { MessageBox.Show("Port nicht offen- Verbindung zu Hardware erforderlich"); }
+
         }
 
         private void numericUpDown_VMAX_ValueChanged(object sender, EventArgs e)

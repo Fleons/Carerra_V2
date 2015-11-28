@@ -52,3 +52,15 @@ C:\Users\Max\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\carerra_gui.ex
 C:\Users\Max\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\carerra_gui.pdb
 C:\Users\Max\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\de-AT\carerra_gui.resources.dll
 C:\Users\Max\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\de-AT\carerra_gui.resources.dll
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\carerra_gui.exe.config
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.exe
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.pdb
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\carerra_gui.exe
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\carerra_gui.pdb
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\bin\Debug\de-AT\carerra_gui.resources.dll
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.Form1.resources
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.Properties.Resources.resources
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.Form1.de-AT.resources
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\carerra_gui.csproj.GenerateResource.Cache
+\\psf\Home\Documents\GitHub\Carerra_V2\C#\carerra_gui\obj\Debug\de-AT\carerra_gui.resources.dll
