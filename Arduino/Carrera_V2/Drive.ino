@@ -1,11 +1,12 @@
 void drive() {
   SpeedValue = analogRead(SensorPin);                                           //Wert des Sensors
+  SpeedValue = map(SpeedValue,18,411,0,1024);   //JE NACH HANDDYNAMOMETER
   SignalValue = SpeedValue;
     if (RunFlag) {                                                              //Sonst "NOTAUS"
 
         //Sensorwert durch 4, da PWM nur bis 255 und Sensor bis 1023
         //SpeedValue hat nun einen Wert im Bereich von 0 bis 255 - dem Kalibrierungswertes
-        SpeedValue = map(SpeedValue/4,0,255,0,255-VehicleCalibrationValue);     //Geschwindikeit ab kalibriertem Nullpunkt                    //map(value, fromLow, fromHigh, toLow, toHigh)
+        SpeedValue = map((SpeedValue/4),0,255,0,255-VehicleCalibrationValue);     //Geschwindikeit ab kalibriertem Nullpunkt                    //map(value, fromLow, fromHigh, toLow, toHigh)
         if (SpeedValue != 0){                                                   // Keine Bremsung
 
         //SpeedValue wird jetzt mit einem definierten Faktor multipliziert.
@@ -19,7 +20,7 @@ void drive() {
       else {                                                                    //Bremsung
         SpeedValue = 0;
       }
-      analogWrite(SpeedPin, SpeedValue);                                        //Setzen der Geschwindikeit des Fahrzeugs
+      analogWrite(SpeedPin,SpeedValue );                                        //Setzen der Geschwindikeit des Fahrzeugs
     }
     delay(50);
 }

@@ -249,5 +249,10 @@ namespace carerra_gui
         {
             serialOutput(VMax_Phrase + "|" + numericUpDown_VMAX.Value);
         }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
