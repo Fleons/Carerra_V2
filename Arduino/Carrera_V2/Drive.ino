@@ -1,6 +1,6 @@
 void drive() {
   SpeedValue = analogRead(SensorPin);                                           //Wert des Sensors
-  SpeedValue = map(SpeedValue,18,411,0,1024);   //JE NACH HANDDYNAMOMETER
+  SpeedValue = map(SpeedValue,0,343,0,1023);   //JE NACH HANDDYNAMOMETER
   SignalValue = SpeedValue;
     if (RunFlag) {                                                              //Sonst "NOTAUS"
 

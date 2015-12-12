@@ -12,6 +12,7 @@ void serialInput(String Parameter_Data)
       {
         VehicleCalibrationValue= splitString(Parameter_Data,'|', 1).toInt();
         EEPROM.write(EEPROM_VehicleCalibrationValue, VehicleCalibrationValue);
+        //Serial.println(VehicleCalibrationValue);
 
       }
       else if (Parameter_Data.startsWith(SFactor_Phrase))
